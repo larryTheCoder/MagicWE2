@@ -16,4 +16,5 @@ jobs:
         echo Directory made.
     - name: List directory contents
       run: |
-        tree /
+        tree /pocketmine
+        tree .
