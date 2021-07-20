@@ -16,5 +16,5 @@ jobs:
         echo Directory made.
     - name: List directory contents
       run: |
-        find / PocketMine-MP.phar
+        find / -name 'PocketMine-MP.phar'
         tree .
