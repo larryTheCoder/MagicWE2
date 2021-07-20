@@ -14,6 +14,6 @@ jobs:
         echo Making directory...
         mkdir vendor
         echo Directory made.
-      - name: List directory contents
-        run: |
-          ls -r
+    - name: List directory contents
+      run: |
+        ls -r
