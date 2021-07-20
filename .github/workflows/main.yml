@@ -6,7 +6,7 @@ jobs:
   phpstan:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       with:
         ref: ${{ github.ref }}
     - name: Create Vendor Directory
@@ -14,13 +14,6 @@ jobs:
         echo Making directory...
         mkdir vendor
         echo Directory made.
-    - name: Download virions to vendor
-      run: |
-        php -f resources/parsepoggit.php > virion_urls.txt
-        cat virion_urls.txt
-        wget -P vendor --content-disposition -i virion_urls.txt
-        rm virion_urls.txt
-    - name: Run PHPStan
-      uses: larryTheCoder/pmmp-phpstan-action@master
-      with:
-        phpstan-config: phpstan.neon.dist
+      - name: List directory contents
+        run: |
+          ls -r
